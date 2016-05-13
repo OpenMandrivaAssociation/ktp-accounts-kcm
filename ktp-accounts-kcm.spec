@@ -1,0 +1,67 @@
+Summary:	KAccouts integration for KDE Telepathy contacts
+Name:		ktp-accounts-kcm
+Version:	16.04.0
+Release:	1
+Epoch:		1
+License:	GPLv2+
+Group:		Graphical desktop/KDE
+Url:		http://www.kde.org
+%define is_beta %(if test `echo %{version} |cut -d. -f3` -ge 70; then echo -n 1; else echo -n 0; fi)
+%if %{is_beta}
+%define ftpdir unstable
+%else
+%define ftpdir stable
+%endif
+Source0:	http://download.kde.org/%{ftpdir}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source100:	%{name}.rpmlintrc
+Patch0:		ktp-accounts-kcm-compile.patch
+BuildRequires:	cmake(ECM)
+BuildRequires:	cmake(Qt5Core)
+BuildRequires:	cmake(Qt5DBus)
+BuildRequires:	cmake(Qt5Gui)
+BuildRequires:	cmake(Qt5Network)
+BuildRequires:	cmake(Qt5Widgets)
+BuildRequires:	cmake(Qt5Designer)
+BuildRequires:	cmake(Qt5PrintSupport)
+BuildRequires:	cmake(Qt5Script)
+BuildRequires:	cmake(Qt5ScriptTools)
+BuildRequires:	cmake(Qt5Test)
+BuildRequires:	cmake(Qt5Quick)
+BuildRequires:	cmake(Qt5Qml)
+BuildRequires:	cmake(Qt5WebKit)
+BuildRequires:	cmake(Qt5TextToSpeech)
+BuildRequires:	cmake(Qt5Xml)
+BuildRequires:	cmake(KF5I18n)
+BuildRequires:	cmake(KF5Service)
+BuildRequires:	cmake(KF5Runner)
+BuildRequires:	cmake(KAccounts)
+BuildRequires:	cmake(KTp)
+
+%description
+KAccounts integration for KDE Telepathy contacts
+
+%files
+%{_libdir}/libktpaccountskcminternal.so.*
+%{_libdir}/qt5/plugins/kaccounts/ui/ktpaccountskcm_plugin_kaccounts.so
+%{_libdir}/qt5/plugins/ktpaccountskcm_plugin_gabble.so
+%{_libdir}/qt5/plugins/ktpaccountskcm_plugin_haze.so
+%{_libdir}/qt5/plugins/ktpaccountskcm_plugin_idle.so
+%{_libdir}/qt5/plugins/ktpaccountskcm_plugin_morse.so
+%{_libdir}/qt5/plugins/ktpaccountskcm_plugin_sipe.so
+%{_libdir}/qt5/plugins/ktpaccountskcm_plugin_sunshine.so
+%{_datadir}/accounts/providers/kde/*.provider
+%{_datadir}/accounts/services/kde/*.service
+%{_datadir}/kservices5/ktpaccountskcm*.desktop
+%{_datadir}/kservicetypes5/ktpaccountskcminternal-accountuiplugin.desktop
+%{_datadir}/telepathy/profiles/*
+
+%prep
+%setup -q
+%apply_patches
+%cmake_kde5
+
+%build
+%ninja -C build
+
+%install
+%ninja_install -C build

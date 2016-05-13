@@ -1,0 +1,10 @@
+--- ktp-accounts-kcm-16.04.0/CMakeLists.txt.omv~	2016-05-13 02:27:41.883046076 +0200
++++ ktp-accounts-kcm-16.04.0/CMakeLists.txt	2016-05-13 02:28:23.058796002 +0200
+@@ -34,7 +34,6 @@ include(KDEFrameworkCompilerSettings NO_
+ include(KDECompilerSettings NO_POLICY_SCOPE)
+ include(ECMInstallIcons)
+ include(FeatureSummary)
+-include(KAccountsMacros)
+ 
+ add_definitions (
+ #                  -DQT_NO_CAST_FROM_ASCII

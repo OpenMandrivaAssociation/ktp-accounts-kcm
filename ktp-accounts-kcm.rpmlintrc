@@ -1,0 +1,2 @@
+# Intentionally not splitting out an internal library
+addFilter("E: incoherent-version-in-name")
