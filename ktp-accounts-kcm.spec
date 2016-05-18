@@ -36,9 +36,10 @@ BuildRequires:	cmake(KF5Service)
 BuildRequires:	cmake(KF5Runner)
 BuildRequires:	cmake(KAccounts)
 BuildRequires:	cmake(KTp)
+BuildRequires:	intltool
 
 %description
-KAccounts integration for KDE Telepathy contacts
+KAccounts integration for KDE Telepathy contacts.
 
 %files
 %{_libdir}/libktpaccountskcminternal.so.*
