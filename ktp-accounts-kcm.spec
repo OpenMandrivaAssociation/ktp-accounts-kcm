@@ -41,7 +41,7 @@ BuildRequires:	intltool
 %description
 KAccounts integration for KDE Telepathy contacts.
 
-%files
+%files -f all.lang
 %{_libdir}/libktpaccountskcminternal.so.*
 %{_libdir}/qt5/plugins/kaccounts/ui/ktpaccountskcm_plugin_kaccounts.so
 %{_libdir}/qt5/plugins/ktpaccountskcm_plugin_gabble.so
@@ -50,6 +50,7 @@ KAccounts integration for KDE Telepathy contacts.
 %{_libdir}/qt5/plugins/ktpaccountskcm_plugin_morse.so
 %{_libdir}/qt5/plugins/ktpaccountskcm_plugin_sipe.so
 %{_libdir}/qt5/plugins/ktpaccountskcm_plugin_sunshine.so
+%{_libdir}/qt5/plugins/ktpaccountskcm_plugin_salut.so
 %{_datadir}/accounts/providers/kde/*.provider
 %{_datadir}/accounts/services/kde/*.service
 %{_datadir}/kservices5/ktpaccountskcm*.desktop
@@ -66,3 +67,17 @@ KAccounts integration for KDE Telepathy contacts.
 
 %install
 %ninja_install -C build
+
+%find_lang kcm_ktp_accounts
+%find_lang kcmtelepathyaccounts_plugin_butterfly
+%find_lang kcmtelepathyaccounts_plugin_gabble
+%find_lang kcmtelepathyaccounts_plugin_haze
+%find_lang kcmtelepathyaccounts_plugin_idle
+%find_lang kcmtelepathyaccounts_plugin_morse
+%find_lang kcmtelepathyaccounts_plugin_pintxo
+%find_lang kcmtelepathyaccounts_plugin_rakia
+%find_lang kcmtelepathyaccounts_plugin_salut
+%find_lang kcmtelepathyaccounts_plugin_sipe
+%find_lang kcmtelepathyaccounts_plugin_sunshine
+
+cat *.lang >all.lang
