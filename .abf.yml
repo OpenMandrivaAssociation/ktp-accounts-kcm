@@ -1,2 +1,4 @@
+removed_sources:
+  ktp-accounts-kcm-17.12.1.tar.xz: a32065b72cf9d85d04f9f71d3c9791b94c7e8dbc
 sources:
-  ktp-accounts-kcm-17.04.0.tar.xz: bb5da3a850768b4b6c55c4dae14029b06be14fdc
+  ktp-accounts-kcm-17.12.2.tar.xz: e32b4ab58fcbbca8eb31e4cc0fe906df7f3681dd
