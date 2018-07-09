@@ -1,6 +1,6 @@
 Summary:	KAccouts integration for KDE Telepathy contacts
 Name:		ktp-accounts-kcm
-Version:	 18.04.2
+Version:	18.04.2
 Release:	1
 Epoch:		1
 License:	GPLv2+
@@ -48,6 +48,7 @@ BuildRequires:	cmake(TelepathyQt5)
 BuildRequires:	cmake(KTp)
 BuildRequires:	cmake(AccountsFileDir)
 BuildRequires:	intltool
+BuildRequires:	pkgconfig(libaccounts-glib)
 
 %description
 KAccounts integration for KDE Telepathy contacts.
