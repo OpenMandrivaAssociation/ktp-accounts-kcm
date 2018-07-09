@@ -35,7 +35,18 @@ BuildRequires:	cmake(KF5I18n)
 BuildRequires:	cmake(KF5Service)
 BuildRequires:	cmake(KF5Runner)
 BuildRequires:	cmake(KAccounts)
+BuildRequires:	cmake(KF5KCMUtils)
+BuildRequires:	cmake(KF5KIO)
+BuildRequires:	cmake(KF5I18n)
+BuildRequires:	cmake(KF5WidgetsAddons)
+BuildRequires:	cmake(KF5Codecs)
+BuildRequires:	cmake(KF5CoreAddons)
+BuildRequires:	cmake(KF5ConfigWidgets)
+BuildRequires:	cmake(KF5IconThemes)
+BuildRequires:	cmake(KF5ItemViews)
+BuildRequires:	cmake(TelepathyQt5)
 BuildRequires:	cmake(KTp)
+BuildRequires:	cmake(AccountsFileDir)
 BuildRequires:	intltool
 
 %description
