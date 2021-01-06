@@ -1,6 +1,6 @@
 Summary:	KAccouts integration for KDE Telepathy contacts
 Name:		ktp-accounts-kcm
-Version:	20.12.0
+Version:	20.12.1
 Release:	1
 Epoch:		1
 License:	GPLv2+
