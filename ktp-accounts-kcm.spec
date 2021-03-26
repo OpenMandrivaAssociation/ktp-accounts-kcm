@@ -46,7 +46,6 @@ BuildRequires:	cmake(KF5IconThemes)
 BuildRequires:	cmake(KF5ItemViews)
 BuildRequires:	cmake(TelepathyQt5)
 BuildRequires:	cmake(KTp)
-BuildRequires:	cmake(AccountsFileDir)
 BuildRequires:	intltool
 BuildRequires:	pkgconfig(libaccounts-glib)
 Requires:	telepathy-haze
