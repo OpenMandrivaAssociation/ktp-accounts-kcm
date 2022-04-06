@@ -1,6 +1,6 @@
 Summary:	KAccouts integration for KDE Telepathy contacts
 Name:		ktp-accounts-kcm
-Version:	21.12.2
+Version:	22.03.80
 Release:	1
 Epoch:		1
 License:	GPLv2+
@@ -14,7 +14,6 @@ Url:		http://www.kde.org
 %endif
 Source0:	http://download.kde.org/%{ftpdir}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 Source100:	%{name}.rpmlintrc
-Patch0:		ktp-accounts-kcm-compile.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt5Core)
 BuildRequires:	cmake(Qt5DBus)
